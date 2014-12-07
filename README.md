@@ -11,3 +11,11 @@ The script works by opening the registry editor with the reg key in the clipboar
 * open the bat file Run PS Script.
 
 A batch file is used to launch the Power Shell script, since on many computers either running scripts (like Power Shell, VBscript, Javascript) is turned off or you would have to open the Power Shell terminal and manually running the PS script which is two steps too many! :expressionless:
+
+
+## How it works ?
+
+By default the Windows Registry Editor remembers the last opened key by saving that key location in `HKCU\Software\Microsoft\Windows\CurrentVersion\Applets\Regedit` in the `LastKey` key.
+
+So all the script do is change that key value to new location and then start the registry editor which would make it go to that key. Voilà.
+

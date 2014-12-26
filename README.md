@@ -1,4 +1,4 @@
-RegJump
+RegJump  [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/Yohanna/RegJump/blob/master/LICENSE)
 =======
 
 A simple Power Shell script to jump to a specific registry key.

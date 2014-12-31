@@ -40,7 +40,7 @@ switch -Wildcard ($Clipboard)
 
 "Opening key: $Clipboard"
 
-# The registry key that regedit reads to determine the last key location
+# The registry key that RegEdit reads to determine the last key location
 
 $RegEditor_LastKey ="HKCU:Software\Microsoft\Windows\CurrentVersion\Applets\Regedit"
 
@@ -50,4 +50,5 @@ Set-ItemProperty -Path $RegEditor_LastKey -Name LastKey -Value  "Computer\$Clipb
 
 Get-ItemProperty -Path $RegEditor_LastKey -Name LastKey
 
+# Open Registry Editor
 Start-Process "$env:windir\regedit.exe"

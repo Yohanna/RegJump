@@ -42,12 +42,12 @@ switch -Wildcard ($Clipboard)
 
 # The registry key that regedit reads to determine the last key location
 
-$Registry_Key ="HKCU:Software\Microsoft\Windows\CurrentVersion\Applets\Regedit"
+$RegEditor_LastKey ="HKCU:Software\Microsoft\Windows\CurrentVersion\Applets\Regedit"
 
-#Get-ItemProperty -Path $Registry_Key -Name LastKey
+#Get-ItemProperty -Path $RegEditor_LastKey -Name LastKey
 
-Set-ItemProperty -Path $Registry_Key -Name LastKey -Value  "Computer\$Clipboard"
+Set-ItemProperty -Path $RegEditor_LastKey -Name LastKey -Value  "Computer\$Clipboard"
 
-Get-ItemProperty -Path $Registry_Key -Name LastKey
+Get-ItemProperty -Path $RegEditor_LastKey -Name LastKey
 
 Start-Process "$env:windir\regedit.exe"
